@@ -50,8 +50,8 @@ public class TestPracticeForm {
         //Проверки
         $(".table-responsive").$(byText("Student Name")).parent().shouldHave(text("Poli Levyrv"));
         $(".table-responsive").$(byText("Student Email")).parent().shouldHave(text("wet@mail.ru"));
-        $(".table-responsive").$(byText("Gender")) .parent().shouldHave(text("Female"));
-        $(".table-responsive").$(byText("Mobile")) .parent().shouldHave(text("88005553535"));
+        $(".table-responsive").$(byText("Gender")).parent().shouldHave(text("Female"));
+        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("88005553535"));
         $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("14 May,1999"));
         $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Maths"));
         $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Reading"));
