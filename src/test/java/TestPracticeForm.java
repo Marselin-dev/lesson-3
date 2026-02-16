@@ -29,13 +29,13 @@ public class TestPracticeForm {
         $("#lastName").setValue("Levyrv");
         $("#userEmail").setValue("wet@mail.ru");
         $("#genterWrapper").$(byText("Female")).click();
-        $("#userNumber").setValue("88005553535");
+        $("#userNumber").setValue("8800555353");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").$(byText("May")).click();
         $(".react-datepicker__year-select").$(byText("1999")).click();
         $(".react-datepicker__month").$(byText("14")).click();
         $(".subjects-auto-complete__input").click();
-        $("[aria-autocomplete=list").sendKeys("m");
+        $("[aria-autocomplete='list']").sendKeys("m");
         $(byText("Maths")).click();
         $("#hobbiesWrapper").$(byText("Reading")).click();
         $("#uploadPicture").uploadFromClasspath("test.jpeg");
@@ -51,7 +51,7 @@ public class TestPracticeForm {
         $(".table-responsive").$(byText("Student Name")).parent().shouldHave(text("Poli Levyrv"));
         $(".table-responsive").$(byText("Student Email")).parent().shouldHave(text("wet@mail.ru"));
         $(".table-responsive").$(byText("Gender")).parent().shouldHave(text("Female"));
-        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("88005553535"));
+        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("8800555353"));
         $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("14 May,1999"));
         $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Maths"));
         $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Reading"));
