@@ -39,7 +39,7 @@ public class SiteCheckTest {
         $("[aria-autocomplete='list']").sendKeys("m");
         $(byText(TOPIC)).click();
         $("#hobbiesWrapper").$(byText(HOBBY)).click();
-        $("#uploadPicture").uploadFromClasspath("test.jpeg");
+        $("#uploadPicture").uploadFromClasspath(PICTURE);
         $("#currentAddress").setValue(CURRENT_ADDRESS);
         $("#state").click();
         $("#stateCity-wrapper").$(byText(STATE)).click();
@@ -56,7 +56,7 @@ public class SiteCheckTest {
         $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text(DATE_OF_BIRTH));
         $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text(TOPIC));
         $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text(HOBBY));
-        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("test.jpeg"));
+        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text(PICTURE));
         $(".table-responsive").$(byText("Address")).parent().shouldHave(text(CURRENT_ADDRESS));
         $(".table-responsive").$(byText("State and City")).parent().shouldHave(text(STATE_AND_CITY));
     }
