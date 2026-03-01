@@ -23,7 +23,7 @@ public class SiteCheckTest {
     @Test
     void checkPracticeForm(){
         //Открывает нужный раздел сайта
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
 
         //Заполняем данными форму practice-form
         $("#firstName").setValue(FIRST_NAME);
