@@ -14,9 +14,10 @@ public class UserData {
     public static final String CURRENT_ADDRESS = "Seaview Avenue";
     public static final String STATE = "Uttar Pradesh";
     public static final String CITY = "Agra";
-    public static final String STUDENT_NAME = "Poli Levyrv";
+    public static final String NAME = "Poli Levyrv";
     public static final String PICTURE = "test.jpeg";
-    public static final String DATE_OF_BIRTH = "14 May,1999";
-    public static final String STATE_AND_CITY = "Uttar Pradesh Agra";
+    public static final String BRITHDAY = "14 May,1999";
+    public static final String REGISTRATION = "Uttar Pradesh Agra";
+    public static final String SUBJECTS_KEY = "m";
 
 }
