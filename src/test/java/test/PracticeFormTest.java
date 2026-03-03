@@ -2,20 +2,17 @@ package test;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
-import pages.components.TextBoxPage;
 
 
 import static testData.ResultData.*;
 import static testData.UserData.*;
 
 
-public class SiteCheckTest extends TestBase{
+public class PracticeFormTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
-    TextBoxPage textBoxPage = new TextBoxPage();
-
 
     @Test
-    void checkPracticeForm() {
+    void positiveScenarioInAutomationPracticeForm() {
         //Открывает practice-form и заполняем полными данными
         registrationPage.openPage()
                 .setFirstName(FIRST_NAME)
@@ -43,22 +40,4 @@ public class SiteCheckTest extends TestBase{
                 .checkResult(STUDENT_REGISTRATION, REGISTRATION);
 
     }
-
-
-    @Test
-    void checkTextBox(){
-        //Открывает text-box-form и заполняем полными данными
-        textBoxPage.openPage()
-                .setName(NAME)
-                .setEmail(EMAIL)
-                .setAddress(CURRENT_ADDRESS)
-                .setRegistration(REGISTRATION)
-                .submitPage()
-                //Проверки формы после отправки данных
-                .checkResult(USER_NAME, NAME)
-                .checkResult(USER_EMAIL, EMAIL)
-                .checkResult(USER_ADDRESS, CURRENT_ADDRESS)
-                .checkResult(USER_REGISTRATION, REGISTRATION);
-    }
 }
-
