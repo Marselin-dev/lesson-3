@@ -10,20 +10,13 @@ import static com.codeborne.selenide.Condition.text;
 import static testData.UserData.*;
 
 
-public class SiteCheckTest {
-
-    @BeforeAll
-    static void setUp() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.baseUrl= "https://demoqa.com";
-        Configuration.timeout = 5000; // default 4000
-    }
+public class SiteCheckTest  extends TestBase {
 
     @Test
     void checkPracticeForm(){
         //Открывает нужный раздел сайта
         open("/automation-practice-form");
+        executeJavaScript("document.getElementById('fixedban')?.remove(); document.querySelector('footer')?.remove();");
 
         //Заполняем данными форму practice-form
         $("#firstName").setValue(FIRST_NAME);
@@ -65,6 +58,8 @@ public class SiteCheckTest {
     void checkTextBox(){
         //Открывает нужный раздел сайта
         open("https://demoqa.com/text-box");
+        executeJavaScript("document.getElementById('fixedban')?.remove(); document.querySelector('footer')?.remove();");
+
 
         //Заполняем данными форму text box
         $("#userName").setValue(STUDENT_NAME);
