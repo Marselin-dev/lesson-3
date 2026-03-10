@@ -11,7 +11,7 @@ public class TextBoxFormTest extends TestBase{
     TextBoxPage textBoxPage = new TextBoxPage();
 
     @Test
-    void checkTextBox(){
+    void successfulScenarioTextBox(){
         //Открывает text-box-form и заполняем полными данными
         textBoxPage.openPage()
                 .setName(NAME)

@@ -12,7 +12,7 @@ public class PracticeFormTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
-    void positiveScenarioInAutomationPracticeForm() {
+    void successfulScenarioInAutomationPracticeForm() {
         //Открывает practice-form и заполняем полными данными
         registrationPage.openPage()
                 .setFirstName(FIRST_NAME)
@@ -38,6 +38,23 @@ public class PracticeFormTest extends TestBase {
                 .checkResult(STUDENT_PHOTO, PICTURE)
                 .checkResult(STUDENT_ADDRESS, CURRENT_ADDRESS)
                 .checkResult(STUDENT_REGISTRATION, REGISTRATION);
+
+    }
+
+    @Test
+    void incompleteSuccessfulScenarioAutomationPracticeForm(){
+        registrationPage.openPage()
+                .setFirstName(FIRST_NAME)
+                .setLastName(LAST_NAME)
+                .setEmail(EMAIL)
+                .setGender(GENDER)
+                .setUserNumber(PHONE_NUMBER)
+                .submitPage()
+                .checkResult(STUDENT_NAME, NAME)
+                .checkResult(STUDENT_EMAIL, EMAIL)
+                .checkResult(STUDENT_GENDER, GENDER)
+                .checkResult(STUDENT_MOBILE, PHONE_NUMBER);
+
 
     }
 }
